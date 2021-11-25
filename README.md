@@ -132,4 +132,4 @@ It is possible to deploy this architecture using an existing VCN and subnet. Ple
 
 ## Architecture Diagram
 
-![](./images/serverless-oci.png)
+![](./images/fn-app.png)

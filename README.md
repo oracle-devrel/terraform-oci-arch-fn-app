@@ -128,7 +128,7 @@ module "oci-arch-fn-app" {
 }
 ```
 
-It is possible to deploy this architecture using an existing VCN and subnet. Please refer to the [examples](https://github.com/oracle-devrel/terraform-oci-arch-fn-app) folder.
+It is possible to deploy this architecture using an existing VCN and subnet. Please refer to the [examples](https://github.com/oracle-devrel/terraform-oci-arch-fn-app/examples/) folder.
 
 ## Architecture Diagram
 

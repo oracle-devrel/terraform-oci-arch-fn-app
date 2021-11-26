@@ -19,22 +19,22 @@ resource "null_resource" "test_function_Push2OCIR" {
 
   provisioner "local-exec" {
     command     = "image=$(docker images | grep cloud-events-demo-fn | awk -F ' ' '{print $3}') ; docker rmi -f $image &> /dev/null ; echo $image"
-    working_dir = "functions/cloud-events-demo-fn"
+    working_dir = "${path.module}/functions/cloud-events-demo-fn"
   }
 
   provisioner "local-exec" {
     command     = "fn build --verbose"
-    working_dir = "functions/cloud-events-demo-fn"
+    working_dir = "${path.module}/functions/cloud-events-demo-fn"
   }
 
   provisioner "local-exec" {
     command     = "image=$(docker images | grep cloud-events-demo-fn | awk -F ' ' '{print $3}') ; docker tag $image ${local.ocir_docker_repository}/${local.ocir_namespace}/${var.ocir_repo_name}/cloud-events-demo-fn:0.0.1"
-    working_dir = "functions/cloud-events-demo-fn"
+    working_dir = "${path.module}/functions/cloud-events-demo-fn"
   }
 
   provisioner "local-exec" {
     command     = "docker push ${local.ocir_docker_repository}/${local.ocir_namespace}/${var.ocir_repo_name}/cloud-events-demo-fn:0.0.1"
-    working_dir = "functions/cloud-events-demo-fn"
+    working_dir = "${path.module}/functions/cloud-events-demo-fn"
   }
 
 }

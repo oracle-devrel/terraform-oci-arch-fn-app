@@ -10,7 +10,7 @@ variable "region" {}
 
 variable "release" {
   description = "Reference Architecture Release (OCI Architecture Center)"
-  default     = "1.0"
+  default     = "1.0.1"
 }
 
 variable "bucket" {
@@ -23,6 +23,18 @@ variable "VCN-CIDR" {
 
 variable "fnsubnet-CIDR" {
   default = "10.0.1.0/24"
+}
+
+variable "use_existing_vcn" {
+  default = false
+}
+
+variable "vcn_id" {
+  default = ""
+}
+
+variable "fn_subnet_id" {
+  default = ""
 }
 
 variable "ocir_repo_name" {

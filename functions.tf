@@ -4,7 +4,7 @@
 resource "oci_functions_application" "test_application" {
     compartment_id = var.compartment_ocid
     display_name = "cloud-events-demo"
-    subnet_ids = [oci_core_subnet.fnsubnet.id]
+    subnet_ids = [!var.use_existing_vcn ? oci_core_subnet.fnsubnet[0].id : var.fn_subnet_id]
     defined_tags   = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 }
 

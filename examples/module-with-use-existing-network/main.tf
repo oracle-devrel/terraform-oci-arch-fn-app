@@ -29,7 +29,7 @@ module "oci-arch-fn-app" {
   ocir_user_name     = var.ocir_user_name
   ocir_user_password = var.ocir_user_password
   use_existing_vcn   = true
-  vcn_id             = oci_core_virtual_network.my_vcn.id
+  vcn_id             = oci_core_virtual_network.my_vcn_with_internet_gateway.id
   fn_subnet_id       = oci_core_subnet.my_public_subnet.id
 }
 

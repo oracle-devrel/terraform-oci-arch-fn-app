@@ -42,7 +42,7 @@ If you don't have the required permissions and quota, contact your tenancy admin
 Now, you'll want a local copy of this repo. You can make that with the commands:
 
     git clone https://github.com/oracle-devrel/terraform-oci-arch-fn-app.git
-    cd oci-arch-fn-app
+    cd terraform-oci-arch-fn-app
     ls
 
 ### Prerequisites

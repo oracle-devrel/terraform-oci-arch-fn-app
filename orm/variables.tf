@@ -25,6 +25,18 @@ variable "fnsubnet-CIDR" {
   default = "10.0.1.0/24"
 }
 
+variable "use_existing_vcn" {
+  default = false
+}
+
+variable "vcn_id" {
+  default = ""
+}
+
+variable "fn_subnet_id" {
+  default = ""
+}
+
 variable "ocir_repo_name" {
   default = "functions"
 }

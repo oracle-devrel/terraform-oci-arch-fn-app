@@ -144,8 +144,8 @@ Initially, this project was created and distributed in [GitHub Oracle QuickStart
 - Ben Lackey (https://github.com/benofben)
 
 ## License
-Copyright (c) 2021 Oracle and/or its affiliates.
+Copyright (c) 2024 Oracle and/or its affiliates.
 
 Licensed under the Universal Permissive License (UPL), Version 1.0.
 
-See [LICENSE](LICENSE) for more details.
+See [LICENSE](LICENSE.txt) for more details.
